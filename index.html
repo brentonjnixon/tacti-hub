@@ -1,25 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">                <!-- Set language to English-->
+<!DOCTYPE html> 
+<html lang="en">        <!--Established the defualt language for the website-->
 
 <head>
-        <meta charset="UTF-8">        <!-- Universal Character set used-->
+        <meta charset="UTF-8">  <!--Selected universal character set-->
         <title>TACTiHUB</title>
-        <style>                        
+        <style>                                 
                 html {
+                        font-size: 28px;
+                }
+
+                body {
+                         background-color: black;
+                         color: rgb(230, 14, 14);
+                         font-size: 18px;
+                }
+
+                nav {
+                        background-color: rgb(243, 234, 234);
+                         color: rgb(230, 14, 14);
+                         font-size: 22px;
+                }
+
+                section h3, section p {
+                        color: rgb(243, 243, 247);
                         font-size: 22px;
                 }
 
-                body {                             
-                         background-color: black;
-                        color: rgb(230, 14, 14);
+                footer {
+                        color: rgba(221, 35, 35, 0.979);
+                        font-size: 16px;
                 }
-        </style>                        <!-- Added foundation colors for background and primary text-->
+        </style>                                                        <!--Original code had the font size, color and other characteristics scattered all over the code, they are now grouped in one place minus welcome message under body-->
 </head>
 
 <body>
-       <h1><u>TACTiHUB</u></h1> <h2><u>The Future to Digital Leaders Training Asset</u></h2> <!-- Decluttered the structure, made it more organized-->
-        <nav>                <!-- Hyperlinks to each page created, all have the option to return to the main page, new .html files created for each page-->
-                <ul>
+       <h1><u>TACTiHUB</u></h1> <h2><u>Developing Both Current & Future Leaders</u></h2> <!-- Decluttered the structure, made it more organized, proper indentation etc.-->
+
+       <p style="color: rgb(243, 243, 247);">Welcome to the TACTiHUB digital training environment.</p> <!-- Added header to section as W3C recommended during code quality check-->
+        <nav>
+                <ul>                                                    <!-- Hyperlinks to each page created, all have the option to return to the main page, new .html files created for each page-->
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="resources.html">Resources</a></li>
@@ -27,12 +46,20 @@
                 </ul>
 
         </nav>
-        <section>                <!--experimenting with multi colors on the page, success-->
-                 <h3 style="color: rgb(243, 243, 247);">What is TactiHub?</h3> <!-- Added header to section as W3C recommended-->
-                 <p style="color: rgb(243, 243, 247);"> The Tactical Leadership Hub (TactiHub) is a mobile-ready technical knowledge base designed to modernize how small-unit combat arms leaders access mission-essential information. 
-                Specifically targeting  Infantrymen (11B)ts for critical tasks like Battle Drills 1A and 6, alongside technical PMCS guidance for the M2, M240B, and M4 weapon systems.
-                </p>
-        </section>         
+                <section>
+                        <h3>What is TactiHub?</h3> 
+                        <p> 
+                        
+                                
+                                The Tactical Leadership Hub (TactiHub) is a mobile-ready technical knowledge base designed to modernize how small-unit combat arms leaders access mission-essential information. 
+                                Specifically targeting Military ocupation specialties Infantrymen (11B), Cavalry Scouts (19D), Bradley Crewman (19C) for critical tasks like Battle Drills 1A and 6, alongside technical PMCS guidance for the M2, M240B, and M4 weapon systems.
+                        </p> 
+                </section> 
+        
+
+    <footer>
+        <p>TACTiHUB is currently being developed & maintained by: Brenton Jerome Nixon</p>
+    </footer>                
 </body>
 
 </html>
