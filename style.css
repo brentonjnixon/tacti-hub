@@ -16,9 +16,13 @@ nav {
         font-size: 22px;
     }
 
-section h3, section p {
+section, section p {
         color: rgb(244, 244, 249);
         font-size: 22px;
+    }
+
+h3  {color:rgb(255, 77, 77)
+
     }
 
 footer {
