@@ -1,3 +1,5 @@
+ /***** Main Theme *****/  
+ 
  html {
         font-size: 28px;
         background-color: rgb(26, 26, 26);
@@ -9,12 +11,23 @@ body {
         color:rgb(255, 77, 77) ;
         font-size: 18px;
     }
+/***** Implimented updated nav *****/ 
 
-nav {
-        background-color: rgb(243,234,234);
-        color: rgb(230, 14, 14);
+nav, nav ul {
+        background-color:rgb(255, 77, 77);
+        color: rgba(255, 77, 77, 0);
         font-size: 22px;
+        list-style-type: none;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
     }
+nav li  {
+    display: inline;
+}
+ /***** End Implimented updated nav *****/
 
 section, section p {
         color: rgb(244, 244, 249);
@@ -28,5 +41,52 @@ h3  {color:rgb(255, 77, 77)
 footer {
         color:rgb(255, 77, 77);
         font-size: 16px;
-    }
-        
+}
+
+/****END Main Theme *****/
+
+/***** Banner CSS Format *****/  
+
+.banner-container   {
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+}
+
+.site-banner   {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 65px;
+}
+/***** End banner css format *****/
+
+/***** New Graphics *****/  
+
+.mos-graphic    {
+        width: 65%;
+        height: auto;
+        display: block;
+}
+
+.resources-graphic    {
+        width: 65%;
+        height: auto;
+        display: block;
+}
+section {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 15px;
+        box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+        section, section p {
+            font-size: 18px;
+        }
+}
+
+/***** End New Graphics *****/
