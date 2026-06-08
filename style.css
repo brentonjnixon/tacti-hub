@@ -1,17 +1,22 @@
- /***** Main Theme *****/  
+/***** Tactihub Theme *****/   
  
- html {
+html {
         font-size: 28px;
-        background-color: rgb(26, 26, 26);
-        color: rgb(255, 77, 77);
+        background-color: rgb(255, 255, 255);
+        color: rgb(26, 26, 26);
      }
 
 body {                          
-        background-color: rgb(26, 26, 26);
-        color:rgb(255, 77, 77) ;
+        background-color: rgb(255, 255, 255);
+        color: rgb(26, 26, 26);
+        font-family:'Roboto', 'Open Sans', Arial, sans-serif;
         font-size: 18px;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
     }
-/***** Implimented updated nav *****/ 
+
+/*****Updated nav *****/ 
 
 nav, nav ul {
         background-color:rgb(255, 77, 77);
@@ -24,18 +29,20 @@ nav, nav ul {
         justify-content: center;
         gap: 20px;
     }
+
 nav li  {
     display: inline;
 }
- /***** End Implemented updated nav *****/
+
+/***** End updated nav *****/
 
 section, section p {
-        color: rgb(244, 244, 249);
+        color: rgb(26, 26, 26);
         font-size: 22px;
     }
 
-h3  {color:rgb(255, 77, 77)
-
+h3  {
+        color:rgb(255, 77, 77);
     }
 
 footer {
@@ -43,7 +50,7 @@ footer {
         font-size: 16px;
 }
 
-/****END Main Theme *****/
+/****End Main Theme *****/
 
 /***** Banner CSS Format *****/  
 
@@ -62,7 +69,8 @@ footer {
         display: block;
         margin-bottom: 65px;
 }
-/***** End banner css format *****/
+
+/***** End banner CSS format *****/
 
 /***** New Graphics *****/  
 
@@ -79,6 +87,7 @@ footer {
         height: auto;
         display: block;
 }
+
 section {
         max-width: 800px;
         margin: 20px auto;
@@ -86,11 +95,115 @@ section {
         box-sizing: border-box;
 }
 
+.tactical-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 25px;
+    margin-bottom: 15px;
+    font-size: 0.55rem;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+}
+
+/* Styling for the Navigation Links */
+nav a, .navbar a {
+    color: rgb(255, 255, 255);
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navigation Links actively being hovered */
+nav a:hover, .navbar a:hover {
+    background-color: rgb(255, 77, 77);
+    color: rgb(26, 26, 26);
+    box-shadow: 0 0 12px rgba(255, 77, 77, 0.6);
+}
+
+/* Styling for the Red Lens button */
+button, .toggle-btn { 
+    background-color: rgb(26, 26, 26);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 77, 77);
+    padding: 6px 12px;
+    font-size: 0.50rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Red Lens button actively being hovered */
+button:hover, .toggle-btn:hover {
+    background-color: rgb(8, 8, 8);
+    color:rgb(255, 77, 77);
+    box-shadow: 0 0 12px rgba(243, 241, 241, 0.911);
+}
+
+/* Red Lens button pressed */
+button:active, .toggle-btn:active {
+    transform: scale(0.96);
+}
+
+/* Mobile Responsiveness Rules */
 @media screen and (max-width: 768px) {
-        section, section p {
-            font-size: 18px;
-        }
+    section, section p {
+        font-size: 18px;
+    }
+    nav, nav ul {
+        gap: 12px;
+        padding: 6px;
+    }
+    .site-banner {
+        margin-bottom: 30px;
+    }
 }
 
 /***** End New Graphics *****/
-/***** End New Graphics *****/
+
+/***** Red Lens Feature & Tactical Power Saving Mode*****/  
+
+/* Created a transparent red lens filter for tactical area of operations */
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 0, 0, 0.35); /* Red with 35% transparency */
+    pointer-events: none; /* Allows you to still click buttons through the red lens */
+    z-index: 9999; /* Forces it to sit on top of everything else */
+    display: none;
+}
+
+/* Turn on the red lens when the class is active */
+body.red-lens-active::after {
+    display: block;
+}
+
+/* Forces background to a dark gray, text to red, and section paragraph text to off-white when active */
+body.red-lens-active {
+    background-color: rgb(26, 26, 26);
+    color: rgb(255, 77, 77);
+}
+
+body.red-lens-active .tactical-banner {
+    color: rgb(244, 244, 249);
+}
+
+body.red-lens-active section, 
+body.red-lens-active section p {
+    color: rgb(244, 244, 249);
+}
