@@ -19,7 +19,7 @@
         <h2><u>Contact & Feedback Support</u></h2> <!--Updated header-->   
 
                 <nav>
-                <button onclick="toggleRedLens()">Toggle Red Lens Mode</button>
+                <button onclick="toggleRedLens()">Toggle Red Lens Mode</button> <!--Red Lens Toggle Added wk5-->
                         <ul>                                                    <!-- Hyperlinks to each page created, all have the option to return to the main page, new .html files created for each page-->
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="mosspecifictasks.html">MOS Specific Tasks</a></li>
@@ -32,7 +32,7 @@
 
                  
         </header>
-                <!--Banner Added-->
+                <!--Banner Added wk5-->
         <div    
 
                 class="banner-container">
@@ -42,7 +42,7 @@
         
         </div>
 
-        <section>                       <!--New section added-->
+        <section>                       
 
         <h3>Get in Touch</h3> 
 
@@ -50,8 +50,45 @@
                         <br>Use the contact information below to reach out with project suggestions, site issues, or content contributions.
 
                 </p>
+        
+<!--Container targeting the submission event listener wk6-->   
 
-        <h3>Project Admin</h3>  <!--Contact info added-->
+       <form id="contactForm">
+
+<!--User Input for Name-->
+
+        <label for="senderName">Name:</label>
+        <input type="text" id="senderName" required>
+
+<!--User Input for email-->
+
+        <label for="senderEmail">Email:</label>
+        <input type="email" id="senderEmail" required>
+
+ <!--User Input for Feedback--> 
+
+        <label for="senderMessage">Manual Updates or Checklist Recommendations:</label>
+        <textarea id="senderMessage" rows="5" required></textarea>
+ 
+<!--Submission Button-->
+
+        <button type="submit">Submit Form</button>
+        </form>
+ 
+<!--Descrete error banner-->
+
+        <div id="formError" style="display: none; margin-top: 15px; font-weight: bold; color: rgb(255, 77, 77);">
+        
+        ATTENTION TO DETAIL! Please enter a valid email address (example: name@domain.com)
+        </div>
+
+<!--Descrete Submission Successful banner-->
+
+        <div id="formConfirmation" style="display: none; margin-top: 15px; font-weight: bold; color: rgb(255, 77, 77);">
+                Submission successful! Thank you for your feedback.
+        </div>
+
+        <h3>Project Admin</h3>  
                 
                 <ul>
                         <li><strong>Platform Admin:</strong>Brenton Jerome Nixon</li>

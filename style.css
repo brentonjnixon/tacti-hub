@@ -207,3 +207,44 @@ body.red-lens-active section,
 body.red-lens-active section p {
     color: rgb(244, 244, 249);
 }
+
+/***** Contact Form Styling wk6 *****/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+form label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 2px solid rgb(26, 26, 26);
+    background-color: rgb(255, 255, 255);
+    color: rgb(26, 26, 26);
+}
+
+form button {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+/* Red Lens Compatibility for Form Inputs */
+body.red-lens-active form input,
+body.red-lens-active form textarea {
+    background-color: rgb(26, 26, 26);
+    color: rgb(244, 244, 249);
+    border: 2px solid rgb(255, 77, 77);
+}
+
+body.red-lens-active #formConfirmation {
+    color: rgb(244, 244, 249);
+}

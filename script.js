@@ -1,4 +1,4 @@
-// Function to turn on and off the red lens mode
+// Function to turn on and off the red lens mode wk5
 
 function toggleRedLens() {
     document.body.classList.toggle("red-lens-active");
@@ -11,7 +11,7 @@ function toggleRedLens() {
     }
 }
 
-// Function to get the military time for Zulu and Local clocks
+// Function to get the military time for Zulu and Local clocks wk5
 
 function updateTacticalClocks() {
     var now = new Date();
@@ -49,14 +49,61 @@ function updateTacticalClocks() {
     }
 }
 
-// Run Red Lens automatically when the webpage finishes loading
+// Run Red Lens automatically when the webpage finishes loading wk5
 
 window.addEventListener("DOMContentLoaded", function() {
     if (localStorage.getItem("redLens") === "enabled") {
         document.body.classList.add("red-lens-active");
     }
     
-    // Run the clock function right away and keep updating it every second
+    // Run the clock function right away and keep updating it every second wk5
     updateTacticalClocks();
     setInterval(updateTacticalClocks, 1000);
+});
+
+// Contact Form added wk6
+
+// Collect DOM elements
+
+    var contactForm = document.getElementById("contactForm");
+    var emailField = document.getElementById("senderEmail");
+    var confirmationBanner = document.getElementById("formConfirmation");
+    var errorBanner = document.getElementById("formError");
+
+//Form Handler and validation rules
+
+contactForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+// Validate user email input, strict validation rule
+
+    var emailValue = emailField.value.trim();
+    var emailPattern = /^[^\s@]+@[^\s@]+\.com$/;
+
+// Confirm user input email matches pattern
+
+    if (!emailPattern.test(emailValue)) {
+
+        errorBanner.style.display = "block";
+        confirmationBanner.style.display = "none";
+        emailField.style.border = "2px solid rgb(255, 77, 77)";
+
+// Hides error message if input passes validation, displays successful submission
+
+    } else {
+
+        errorBanner.style.display = "none";
+        confirmationBanner.style.display = "block";
+        emailField.style.border = "";
+        this.reset(); 
+
+    }
+});
+
+// Real-time monitoring of user input to inform user of errors
+
+emailField.addEventListener("input", function() {
+
+        errorBanner.style.display = "none";
+        emailField.style.border = "";
 });
