@@ -107,3 +107,4 @@ emailField.addEventListener("input", function() {
         errorBanner.style.display = "none";
         emailField.style.border = "";
 });
+

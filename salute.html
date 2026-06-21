@@ -1,0 +1,99 @@
+<!DOCTYPE html>                 <!--Same code format as index.html-->
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <title>TACTiHUB</title>
+        <link rel="stylesheet" href="style.css">   <!--Updated CSS page linked-->
+</head>
+
+<body>
+        <div class="tactical-banner">
+        <div id="zulu"></div>
+        <div id="local"></div>
+        </div>
+
+        <header>
+                <h1><b>TACTiHUB</b></h1> 
+                <h2><u>Tactical Reporting</u></h2>
+                        
+                <nav>
+                <button onclick="toggleRedLens()">Toggle Red Lens Mode</button>
+                        <ul>                                                                     
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="mosspecifictasks.html">MOS Specific Tasks</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="resources.html">Resources</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        
+                </nav>
+
+        </header>
+
+        <div class="banner-container">
+                <img src="images/resources.jpg"
+                alt="Site Banner"
+                class="site-banner">
+
+        </div>
+
+        <section>
+                <h3>SALUTE / SPOT Report Template</h3>
+                <p>     
+                        The SALUTE report is an established military reporting format used to transmit critical information regarding enemy activity, strength, and equipment. Use this digital template to draft precise, standardized intelligence reports before sending them up through communication channels.
+                </p>
+
+                <form id="saluteForm" onsubmit="event.preventDefault(); alert('Report drafted successfully. Copy text or reset form.');">
+                        
+                        <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; font-weight: bold; margin-bottom: 5px;">SIZE</label>
+                                <p style="font-size: 0.9em; color: #aaa; margin: 0 0 5px 0;">Specify the number of enemy personnel, vehicles, or equipment observed.</p>
+                                <input type="text" placeholder="e.g., 3x Hostile Dismounts, 1x BTR-80" style="width: 100%; padding: 10px; background-color: #1a1a1a; border: 1px solid #444; border-radius: 4px; color: #fff;">
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; font-weight: bold; margin-bottom: 5px;">ACTIVITY</label>
+                                <p style="font-size: 0.9em; color: #aaa; margin: 0 0 5px 0;">Describe what the enemy is currently doing (traveling, digging in, establishing an OP).</p>
+                                <input type="text" placeholder="e.g., Establishing a hasty checkpoint across Main Supply Route" style="width: 100%; padding: 10px; background-color: #1a1a1a; border: 1px solid #444; border-radius: 4px; color: #fff;">
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; font-weight: bold; margin-bottom: 5px;">LOCATION</label>
+                                <p style="font-size: 0.9em; color: #aaa; margin: 0 0 5px 0;">Provide grid coordinates (MGRS), distance and direction from an unclassified objective, or landmarks.</p>
+                                <input type="text" placeholder="e.g., MGRS 35T NL 1234 5678" style="width: 100%; padding: 10px; background-color: #1a1a1a; border: 1px solid #444; border-radius: 4px; color: #fff;">
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; font-weight: bold; margin-bottom: 5px;">UNIT / UNIFORM</label>
+                                <p style="font-size: 0.9em; color: #aaa; margin: 0 0 5px 0;">Detail any patches, distinctive uniform items, camouflage patterns, or markings.</p>
+                                <input type="text" placeholder="e.g., Dark green digital camouflage uniforms, no visible unit patches" style="width: 100%; padding: 10px; background-color: #1a1a1a; border: 1px solid #444; border-radius: 4px; color: #fff;">
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; font-weight: bold; margin-bottom: 5px;">TIME</label>
+                                <p style="font-size: 0.9em; color: #aaa; margin: 0 0 5px 0;">Enter the exact Date-Time Group (DTG) when the contact or observations occurred.</p>
+                                <input type="text" placeholder="e.g., 211430LJUN26" style="width: 100%; padding: 10px; background-color: #1a1a1a; border: 1px solid #444; border-radius: 4px; color: #fff;">
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 30px;">
+                                <label style="display: block; font-weight: bold; margin-bottom: 5px;">EQUIPMENT</label>
+                                <p style="font-size: 0.9em; color: #aaa; margin: 0 0 5px 0;">List any weapons, communications arrays, night vision devices, or specialized tools noticed.</p>
+                                <input type="text" placeholder="e.g., Carrying AK-74 variants, 1x handheld tactical radio array" style="width: 100%; padding: 10px; background-color: #1a1a1a; border: 1px solid #444; border-radius: 4px; color: #fff;">
+                        </div>
+
+                        <div class="btn-group" style="display: flex; gap: 15px;">
+                                <button type="submit" style="padding: 12px 24px; background-color: rgb(255, 77, 77); color: #fff; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Draft Report</button>
+                                <button type="reset" style="padding: 12px 24px; background-color: #333; color: #fff; border: 1px solid #555; border-radius: 4px; cursor: pointer;">Reset Template</button>
+                        </div>
+                </form>              
+        </section>
+
+        <footer>
+                <p>TACTiHUB is currently being developed & maintained by: Brenton Jerome Nixon</p>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>         <!--Passed W3C quality check-->
